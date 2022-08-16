@@ -3,11 +3,12 @@
     > ul {
         @apply flex items-center justify-between;
         > li {
+            width: 14%;
             > a{
-                @apply relative text-neutral-500;
+                @apply relative text-neutral-500 block text-center;
 
                 .icon{
-                    @apply text-lg;
+                    @apply text-3xl w-full h-full;
                 }
 
                 &.active {
