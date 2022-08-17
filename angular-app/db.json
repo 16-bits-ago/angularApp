@@ -1,0 +1,12 @@
+{
+    "food": [
+      { "id": 1, "title": "Beef Burger", "price": 200, "type": "burger", "image": "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" },
+      { "id": 2, "title": "Chicken Burger", "price": 130, "type": "burger", "image": "https://www.pngmart.com/files/16/Classic-Cheese-Burger-PNG-Photos.png" },
+      { "id": 3, "title": "BigMac", "price": 110, "type": "burger", "image": "https://www.pngkey.com/png/full/168-1682325_for-a-limited-time-your-favourite-burger-the.png" },
+      { "id": 4, "title": "Cheese Burger", "price": 50, "type": "burger", "image": "https://www.pngmart.com/files/16/Double-Cheese-Burger-PNG-Image.png" },
+      { "id": 5, "title": "Beef Taco", "price": 170, "type": "taco", "image": "https://oldelpasoarabia.com/img/triple_threat_steakhouse_tacos.png" },
+      { "id": 6, "title": "Whole Chicken", "price": 500, "type": "chicken", "image": "https://toppng.com/uploads/preview/fried-chicken-png-fried-full-chicken-115636498664i2qwqypi5.png" },
+      { "id": 7, "title": "Coca Cola", "price": 99, "type": "drink", "image": "https://www.picng.com/upload/coca_cola/png_coca_cola_11457.png" },
+      { "id": 8, "title": "Irn Bru", "price": 59, "type": "drink", "image": "https://sodexo-cy.com/Admin/Public/GetImage.ashx?Width=800&Height=800&Crop=5&DoNotUpscale=True&FillCanvas=True&Image=/Files/Images/Ecom/Products/19092EA.png&AlternativeImage=%2FFiles%2FTemplates%2FDesigns%2FRapido%2FImages%2Fno-image-available.png" } 
+    ]
+}

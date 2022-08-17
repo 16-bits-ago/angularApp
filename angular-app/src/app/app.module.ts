@@ -8,6 +8,9 @@ import { HeaderModule } from './components/ui/layout/header/header.module';
 import { SaleComponent } from './components/screens/sale/sale.component';
 import { ProfileComponent } from './components/screens/profile/profile.component';
 import { FavoritesComponent } from './components/screens/favorites/favorites.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { HomeModule } from './components/screens/home/home.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,14 @@ import { FavoritesComponent } from './components/screens/favorites/favorites.com
     FavoritesComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    HeaderModule
+    HeaderModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
