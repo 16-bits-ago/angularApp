@@ -4,5 +4,8 @@
 
 html,
 body{
+    @apply h-full text-base;
     background-color: #f9f8fa;
 }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
