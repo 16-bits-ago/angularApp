@@ -1,7 +1,14 @@
-<div>
+<!-- <div>
     <ul>
         <li *ngFor="let food of foods">
             {{food.title}}
         </li>
     </ul>
-</div>
+</div> -->
+
+<main>
+    <div class="catalog">
+        <app-food-item *ngFor="let food of foods" [food]="food">
+        </app-food-item>
+    </div>
+</main>
