@@ -7,8 +7,9 @@
 </div> -->
 
 <main>
+    <app-search [foods]="foods"></app-search>
     <div class="catalog">
-        <app-food-item *ngFor="let food of foods" [food]="food">
-        </app-food-item>
+        <app-food-item *ngFor="let food of foods" 
+        [food]="food"></app-food-item>
     </div>
 </main>
