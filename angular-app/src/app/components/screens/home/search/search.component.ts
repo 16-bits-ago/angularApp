@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IFood } from 'src/app/services/food/food.interface';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
-  constructor() { }
+  @Input() foods: IFood[]
+  @Output() findFoods = new EventEmitter<{ searchTerm: string
 
-  ngOnInit(): void {
+  }>();
+
+  searchTerm = ''
+
+  handleSearch(e:KeyboardEvent) {
+    if (e.key === 'Enter') {
+      this.findFoods.emit({searchTerm: this.searchTerm})
+      /* this.foods = this.foods.filter(food => food.title.toLocaleLowerCase().includes(this.searchTerm.toLowerCase())) */
+    }
   }
-
 }
