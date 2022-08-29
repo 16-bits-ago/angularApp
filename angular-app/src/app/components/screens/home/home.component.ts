@@ -9,14 +9,20 @@ import { FoodService } from 'src/app/services/food/food.service';
 })
 export class HomeComponent implements OnInit {
 
-  foods:IFood[] = []
+  foods: IFood[] = []
+  filteredFoods: IFood[] = []
 
   constructor(private foodservice: FoodService) { }
 
   ngOnInit(){
     this.foodservice.getAll().subscribe(data => {
       this.foods = data
+      this.filteredFoods = data
     })
+  }
+
+  onSearch(eventData: { searchTerm: string }){
+    this.filteredFoods = this.foods.filter(food => food.title.toLocaleLowerCase().includes(eventData.searchTerm.toLowerCase()))
   }
 
 }

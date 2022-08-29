@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IFood } from 'src/app/services/food/food.interface';
 
 @Component({
@@ -9,16 +9,16 @@ import { IFood } from 'src/app/services/food/food.interface';
 export class SearchComponent {
 
   @Input() foods: IFood[]
+  @Output() findFoods = new EventEmitter<{ searchTerm: string
+
+  }>();
 
   searchTerm = ''
 
   handleSearch(e:KeyboardEvent) {
     if (e.key === 'Enter') {
-      console.log('Enter Works')
-      this.foods = this.foods.filter(food => 
-        food.title.toLowerCase().includes(this.searchTerm.toLowerCase())
-      )
-      console.log(this.foods)
+      this.findFoods.emit({searchTerm: this.searchTerm})
+      /* this.foods = this.foods.filter(food => food.title.toLocaleLowerCase().includes(this.searchTerm.toLowerCase())) */
     }
   }
 }
