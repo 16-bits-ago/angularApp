@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IFood } from 'src/app/services/food/food.interface';
+/* import { IFood } from 'src/app/services/food/food.interface'; */
 
 @Component({
   selector: 'app-search',
@@ -8,7 +8,7 @@ import { IFood } from 'src/app/services/food/food.interface';
 })
 export class SearchComponent {
 
-  @Input() foods: IFood[]
+ /*  @Input() foods: IFood[] */
   @Output() findFoods = new EventEmitter<{ searchTerm: string
 
   }>();
